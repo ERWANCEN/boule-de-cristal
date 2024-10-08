@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#boule {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: orange;
+    position: relative;
+    box-shadow: 0 0 10px black;
+}
+
+#reflet {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    filter: blur(15px);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+#etoile {
+    margin: 50px 0;
+    position: relative;
+    display: block;
+    color: red;
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid red;
+    border-left: 10px solid transparent;
+    transform: rotate(35deg);
+    position: absolute;
+    top: 47px;
+    left: 91px;
+}
+
+#etoile:before {
+    border-bottom: 8px solid red;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -7px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+#etoile:after {
+    position: absolute;
+    display: block;
+    color: red;
+    top: 0px;
+    left: -11px;
+    width: 0px;
+    height: 0px;
+    border-right: 10px solid transparent;
+    border-bottom: 7px solid red;
+    border-left: 10px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
